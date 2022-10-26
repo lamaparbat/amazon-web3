@@ -25,9 +25,9 @@ const ProductsContainer = () => {
     </div>
     <div className='mt-2 grid lg:w-[950px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'>
      {
-      filteredCollection && filteredCollection.map((data) => {
+      filteredCollection && filteredCollection.map((data, index) => {
        const { img, name, price } = data;
-       return <ItemCard url={img} name={name} price={price} />
+       return <ItemCard url={img} name={name} price={price} key={index} />
       })
      }
     </div>
