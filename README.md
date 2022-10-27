@@ -1,20 +1,13 @@
-# Amazon@3.0 WEB3 CLONE
+# Sample Hardhat Project
 
-1. Open Vscode terminal and
-   - ` npx create-next-app@latest amzon-web3 `                        [init Frontend project]
-   - ` npm add -D tailwindcss postcss autoprefixer `                  [Css Framework]
-      - `npx tailwindcss init -p`                  [Generate tailwindcss config file]
-      -  Replace the tailwindcss.config with https://tailwindcss.com/docs/guides/nextjs
-   - ` mkdir smartcontracts `                                         [Contains smartcontracts]
-   -  ` npm run dev `                                                 [Start frontend server]
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
-2. 
-   
-3. Install additional npm packages
-   - ` npm add react-icons react-spinners react-simple-hook-modal `
-   - ` npm add @walletconnect/web3-provider @web3auth/web3auth ethers`
-   - ` npm add magic-sdk moment web3uikit `
-   
-4. Now Let`s code
-   - Go to /pages/index.js page and remove the <main>...</main> and rename the title inside <head>...</head>
-   - 
+Try running some of the following tasks:
+
+```shell
+npx hardhat help
+npx hardhat test
+REPORT_GAS=true npx hardhat test
+npx hardhat node
+npx hardhat run scripts/deploy.js
+```

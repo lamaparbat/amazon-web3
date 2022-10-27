@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import { FaAmazon } from 'react-icons/fa';
 import SearchableDropdown from './SearchableDropdown';
 import { AiFillCaretDown } from 'react-icons/ai';
@@ -6,10 +7,11 @@ import { BsCart3 } from 'react-icons/bs';
 
 const Navbar = () => {
  const [account, setAccount] = useState(null);
+ const route = useRouter();
 
  return (
   <div className='flex justify-center h-fit py-3 bg-dark text-light'>
-   <div className='w-[70px] flex items-center'>
+   <div className='w-[70px] flex items-center' onClick={() => route.push("/")}>
     <FaAmazon className='text-3xl position-absolute text-light cursor-pointer' />
    </div>
    <div className='flex w-[180px] items-center cursor-pointer sm:invisible md:invisible lg:visible'>
