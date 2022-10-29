@@ -20,10 +20,8 @@ const Navbar = () => {
    </div>
    <SearchableDropdown />
    <div className='px-4 flex justify-around w-[280px] sm:invisible md:visible lg:visible'>
-    <button className='py-0 flex w-[150px] justify-center items-center border border-1 border-ligh rounded-1 cursor-pointer'>
-     {
-      account ? <span>Parbat`s Account</span> : <span>Connect Metamask</span>
-     }
+    <button className='py-0 flex w-[120px] justify-center items-center border border-1 border-ligh rounded-1 cursor-pointer'>
+     {account ? 'Parbat`s Account' : 'Connect Wallet'}
     </button>
     <div className='flex items-center ml-3'>
      <BsCart3 className='text-2xl cursor-pointer' />
