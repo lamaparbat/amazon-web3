@@ -17,4 +17,4 @@
    
 4. Now Let`s code
    - Go to /pages/index.js page and remove the <main>...</main> and rename the title inside <head>...</head>
-   - 
+   
