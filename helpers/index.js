@@ -11,7 +11,6 @@ const pinataGatewayUrl = process.env.NEXT_PUBLIC_PINATA_GATEWAY_URL;
 
 const uploadJSONToIPFS = async (JSONBody) => {
   //making axios POST request to Pinata ⬇️
-  console.log(JSONBody)
   return axios.post(pinataJsonToIPFSUrl, JSONBody, {
     headers: {
       pinata_api_key: key,
@@ -62,6 +61,8 @@ const uploadFileToIPFS = async (file) => {
 };
 
 const getAllNFTs = async () => {
+  if (!window?.web3) return;
+
   let Contract = await getContract(window.ethereum);
   let transaction = await Contract.getAllNFTs();
 

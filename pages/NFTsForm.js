@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../Components/Navbar';
 import { FaEthereum } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';

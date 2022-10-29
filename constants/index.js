@@ -580,6 +580,7 @@ const CONTRACT_ADDRESS = "0x91961D095E650A7b77540BC5C1C5a7Ffa1554F88";
 
 
 const getContract = (ethereum) => {
+ if (!window?.web3) return;
  const Provider = new ethers.providers.Web3Provider(ethereum);
  const Signer = Provider.getSigner();
  const Contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, Signer);

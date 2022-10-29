@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { FaAmazon } from 'react-icons/fa';
 import SearchableDropdown from './SearchableDropdown';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { BsCart3 } from 'react-icons/bs';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
  const [account, setAccount] = useState(null);

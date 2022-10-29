@@ -6,6 +6,7 @@ import { HiStatusOffline } from 'react-icons/hi';
 import _ from 'lodash';
 import { nftsCollections } from '../constants';
 import { getAllNFTs } from '../helpers/index';
+import { toast } from 'react-toastify';
 
 const ProductsContainer = () => {
   const [defaultCollection, setDefaultCollections] = useState(nftsCollections);
@@ -13,6 +14,7 @@ const ProductsContainer = () => {
   const [isOffline, setOfflineStatus] = useState(true);
 
   useEffect(() => {
+    if (!window?.web3) return;
     (async () => {
       let collections = await getAllNFTs();
 
@@ -34,8 +36,8 @@ const ProductsContainer = () => {
   }
 
   return (
-    <div className='py-3 w-100 h-screen bg-slate-100 flex justify-center'>
-      <div className='px-2 lg:w-[1000px] md:w-[800px] sm:w-[500px] '>
+    <div className='py-3 w-100 height-screen bg-slate-100 flex justify-center'>
+      <div className='px-2 lg:h-[1000px] md:w-[800px] sm:w-[500px] '>
         <div className='pe-4 flex justify-between items-center w-[914px]'>
           <div className='flex items-center'>
             <h4>NFT Marketplaces {isOffline}</h4>
