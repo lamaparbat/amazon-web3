@@ -33,15 +33,15 @@ const ProductsContainer = () => {
   }, []);
 
   const filterCollections = () => {
-    if (!nftCollections) return;
-    let filter = _.sortBy(nftCollections, ["price"]);
+    if (!nftCollections && !offlineView) return;
+    let filter = _.sortBy((nftCollections), ["price"]);
     setNftCollections(filter);
   }
 
   return (
     <div className='py-3 w-100 height-screen bg-slate-100 flex justify-center'>
-      <div className='px-2 lg:h-[1000px] md:w-[800px] sm:w-[500px] '>
-        <div className='pe-4 flex justify-between items-center w-[914px]'>
+      <div className='px-2 lg:h-[1000px] md:w-[800px] sm:w-[500px]'>
+        <div className='pe-1 flex justify-between items-center w-[920px]'>
           <div className='py-2 flex items-center'>
             <h4 data-tip="React-tooltip">NFT Marketplaces {isOffline}</h4>
             {
@@ -55,11 +55,11 @@ const ProductsContainer = () => {
               </div>
             }
           </div>
-          <div
+          <button
             onClick={filterCollections}
-            className={`px-3 flex items-center border border-1 border-grey cursor-pointer bg-light ${nftCollections && 'disabled'}`}>
-            SORT &nbsp;<FaSort className='text-lg' />
-          </div>
+            className={`btn btn-warning w-fit px-3 py-1 rounded-1 d-flex justify-around items-center`}>
+            SORT <FaSort className='text-lg ml-4' />
+          </button>
         </div>
         <div className='mt-2 grid lg:w-[950px] lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'>
           {

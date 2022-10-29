@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         bungee: ['"Bungee", cursive']
       }
-    },
+    }
   },
   plugins: [],
 }
