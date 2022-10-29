@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ItemCard from './ItemCard';
 import ItemCardSkeleton from './ItemCardSkeleton';
 import { FaSort } from 'react-icons/fa';
-import { HiStatusOffline } from 'react-icons/Hi';
+import { HiStatusOffline } from 'react-icons/hi';
 import _ from 'lodash';
 import { nftsCollections } from '../constants';
 import { getAllNFTs } from '../helpers/index';
