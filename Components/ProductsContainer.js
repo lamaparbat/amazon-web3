@@ -6,21 +6,22 @@ import { HiStatusOffline } from 'react-icons/hi';
 import _ from 'lodash';
 import { nftsCollections } from '../constants';
 import { getAllNFTs } from '../helpers/index';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 const ProductsContainer = () => {
   const [defaultCollection, setDefaultCollections] = useState(nftsCollections);
   const [nftCollections, setNftCollections] = useState([]);
-  const [isOffline, setOfflineStatus] = useState(true);
+  const [isOffline, setOfflineStatus] = useState(false);
 
   useEffect(() => {
-    if (!window?.web3) return;
+    if (!window?.web3) {
+      toast.warning("Please install metamask wallet.", { toastId: 1 });
+      return setOfflineStatus(true);
+    }
     (async () => {
       let collections = await getAllNFTs();
-
       // remove first 4 
       collections = collections.slice(4);
-
       setNftCollections(collections);
     })();
 
@@ -64,6 +65,7 @@ const ProductsContainer = () => {
           }
         </div>
       </div>
+      <ToastContainer position="top-center" />
     </div>
   )
 }
