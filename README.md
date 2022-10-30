@@ -9,7 +9,7 @@
 
 
 
-# Building steps
+## Building steps
 1. Open Vscode terminal and
    - ` npx create-next-app@latest amzon-web3 `                        [init Frontend project]
    - ` npm add -D tailwindcss postcss autoprefixer `                  [Css Framework]
