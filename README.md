@@ -1,5 +1,15 @@
 # Amazon@3.0 WEB3 CLONE
 
+## Installation guide
+1. Open terminal
+2. `git clone https://github.com/lamaparbat/amazon-web3.git`
+3. open the recently clone project in your favourite code editor [VScode, or Webstorm, or ... ]
+3. `npm install`
+4. `npm run dev`
+
+
+
+# Building steps
 1. Open Vscode terminal and
    - ` npx create-next-app@latest amzon-web3 `                        [init Frontend project]
    - ` npm add -D tailwindcss postcss autoprefixer `                  [Css Framework]
