@@ -1,4 +1,7 @@
 # Amazon@3.0 WEB3 CLONE
+<img width="1440" alt="Screen Shot 2022-11-07 at 20 12 21" src="https://user-images.githubusercontent.com/64581460/200334622-e47c8d01-f8a6-4abb-87a2-3d0b1ef93926.png">
+
+
 
 ## Installation guide
 1. Open terminal
