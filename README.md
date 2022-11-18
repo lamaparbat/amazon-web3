@@ -6,7 +6,7 @@
 
 
 
-## Installation guide
+## Installation guides
 1. Open terminal
 2. `git clone https://github.com/lamaparbat/amazon-web3.git`
 3. open the recently clone project in your favourite code editor [VScode, or Webstorm, or ... ]
